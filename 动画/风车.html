@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.picture{
+				width: 1200px;
+				height: 500px;
+				background-color: skyblue;
+				overflow: hidden;
+				position: relative;
+			}
+			/* 山 */
+			.mountain1{
+				width: 500px;
+				height: 500px;
+				background-color: green;
+				border-radius: 50px;
+				transform: rotate(45deg);
+				position: absolute;
+				top: 450px;
+				left: -150px;
+			}
+			.mountain2{
+				width: 1000px;
+				height: 1000px;
+				background-color: green;
+				border-radius: 50px;
+				transform: rotate(45deg);
+				position: absolute;
+				top: 450px;
+				left: -150px;
+			}
+			.mountain3{
+				width: 1000px;
+				height: 1000px;
+				background-color: green;
+				border-radius: 200px;
+				transform: rotate(45deg);
+				position: absolute;
+				top: 350px;
+				left: 150px;
+			}
+			.mountain4{
+				width: 1000px;
+				height: 1000px;
+				background-color: green;
+				border-radius: 100px;
+				transform: rotate(45deg);
+				position: absolute;
+				top: 350px;
+				left: 650px;
+				z-index: 200;
+			}
+			.wind{
+				width: 10px;
+				height: 100px;
+				background-color: saddlebrown;
+				position: absolute;
+				top: 200px;
+				left: 1000px;
+				/* z-index 是z轴上的层叠顺序 , 没有单位 , 数值大的在前面
+				需要配合 绝对定位或者相对定位使用
+				默认值是0
+				z-index相同时,后写的在前面 */
+				z-index: 100;
+			}
+			.rotate{
+				width: 50px;
+				height: 50px;
+				/* background-color: black; */
+				position: absolute;
+				top: -25px;
+				left: -20px;
+				/* linear 线性 - 平滑的运动
+				默认是 ease 先快后慢 */
+				animation: rotate1 1s linear infinite;
+			}
+			.t1{
+				width: 100px;
+				height: 10px;
+				background-color: white;
+				position: absolute;
+				top: 20px;
+				left: -25px;
+				border-radius: 50px/5px;
+			}
+			.t2{
+				width: 10px;
+				height: 100px;
+				background-color: white;
+				border-radius: 5px/50px;
+				position: absolute;
+				top: -25px;
+				left: 20px;
+			}
+			@keyframes rotate1{
+				0%{
+					transform: rotate(0deg);
+				}
+				100%{
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="picture">
+			<div class="mountain1"></div>
+			<div class="mountain2"></div>
+			<div class="mountain3"></div>
+			<div class="mountain4"></div>
+			
+			<div class="wind">
+				<div class="rotate">
+					<div class="t1"></div>
+					<div class="t2"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
